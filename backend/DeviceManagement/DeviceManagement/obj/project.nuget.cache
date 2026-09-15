@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2xjKHRoniFc=",
+  "success": true,
+  "projectFilePath": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\DeviceManagement.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512"
+  ],
+  "logs": []
+}

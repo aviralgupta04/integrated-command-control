@@ -1,0 +1,291 @@
+.devices-page {
+    padding: 30px;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header */
+
+.devices-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.devices-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.devices-header p {
+    margin-top: 8px;
+    color: #8b949e;
+}
+
+/* Add Device Button */
+
+.add-device-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-device-btn:hover {
+    opacity: 0.9;
+}
+
+/* Table Container */
+
+.devices-container {
+    background-color: #151e29;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table */
+
+.devices-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.devices-table th {
+    text-align: left;
+    padding: 16px;
+    background-color: #1c2735;
+    color: #9ca3af;
+}
+
+.devices-table td {
+    padding: 16px;
+    border-top: 1px solid #273244;
+}
+
+.devices-table tr:hover {
+    background-color: #1a2533;
+}
+
+.device-name {
+    font-weight: 500;
+}
+
+/* Status */
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.online {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.offline {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+/* Buttons */
+
+.action-btn {
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.delete-btn {
+    background: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =========================
+   Modal Overlay
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   Modal
+========================= */
+
+.add-device-modal {
+    width: 550px;
+
+    background: #151e29;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   Modal Header
+========================= */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+.modal-header p {
+    margin-top: 6px;
+
+    color: #8b949e;
+
+    font-size: 14px;
+}
+
+.close-btn {
+    background: transparent;
+
+    border: none;
+
+    color: #9ca3af;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.camera-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #c9d1d9;
+
+    font-size: 14px;
+}
+
+.form-group input {
+    background: #0b0f14;
+
+    border: 1px solid #303b4a;
+
+    color: white;
+
+    padding: 11px;
+
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+}
+
+.form-group input::placeholder {
+    color: #667085;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.modal-footer {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.cancel-btn {
+    background: transparent;
+
+    border: 1px solid #3b4655;
+
+    color: #c9d1d9;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.save-device-btn {
+    background: #2563eb;
+
+    border: none;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.save-device-btn:hover {
+    background: #1d4ed8;
+}

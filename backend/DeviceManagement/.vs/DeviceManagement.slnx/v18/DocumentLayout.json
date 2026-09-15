@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\services\\cameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\services\\cameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\onvif\\onvifdiscoveryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\onvif\\onvifdiscoveryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\onvif\\onvifcameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\onvif\\onvifcameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\interfaces\\icameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\interfaces\\icameraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\services\\onvifservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\services\\onvifservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\models\\addcamerarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\models\\addcamerarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\controllers\\camerascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\controllers\\camerascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|d:\\integrated command and control\\integrated-command-control\\backend\\devicemanagement\\devicemanagement\\interfaces\\ionvifservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A251E26-039B-E997-2F75-C0127155F13D}|DeviceManagement\\DeviceManagement.csproj|solutionrelative:devicemanagement\\interfaces\\ionvifservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddCameraRequest.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Models\\AddCameraRequest.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\Models\\AddCameraRequest.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Models\\AddCameraRequest.cs",
+              "RelativeToolTip": "DeviceManagement\\Models\\AddCameraRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:16:45.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OnvifService .cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Services\\OnvifService .cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\Services\\OnvifService .cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Services\\OnvifService .cs",
+              "RelativeToolTip": "DeviceManagement\\Services\\OnvifService .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:06:35.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IOnvifService.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Interfaces\\IOnvifService.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\Interfaces\\IOnvifService.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Interfaces\\IOnvifService.cs",
+              "RelativeToolTip": "DeviceManagement\\Interfaces\\IOnvifService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:04:58.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICameraService.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Interfaces\\ICameraService.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\Interfaces\\ICameraService.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Interfaces\\ICameraService.cs",
+              "RelativeToolTip": "DeviceManagement\\Interfaces\\ICameraService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T17:04:46.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OnvifCameraService.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\ONVIF\\OnvifCameraService.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\ONVIF\\OnvifCameraService.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\ONVIF\\OnvifCameraService.cs",
+              "RelativeToolTip": "DeviceManagement\\ONVIF\\OnvifCameraService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T11:08:12.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OnvifDiscoveryService.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\ONVIF\\OnvifDiscoveryService.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\ONVIF\\OnvifDiscoveryService.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\ONVIF\\OnvifDiscoveryService.cs",
+              "RelativeToolTip": "DeviceManagement\\ONVIF\\OnvifDiscoveryService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T11:07:55.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraService.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Services\\CameraService.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\Services\\CameraService.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Services\\CameraService.cs",
+              "RelativeToolTip": "DeviceManagement\\Services\\CameraService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T11:06:59.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CamerasController.cs",
+              "DocumentMoniker": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Controllers\\CamerasController.cs",
+              "RelativeDocumentMoniker": "DeviceManagement\\Controllers\\CamerasController.cs",
+              "ToolTip": "D:\\Integrated command and control\\integrated-command-control\\backend\\DeviceManagement\\DeviceManagement\\Controllers\\CamerasController.cs",
+              "RelativeToolTip": "DeviceManagement\\Controllers\\CamerasController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T11:05:46.413Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
