@@ -7,18 +7,47 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build output - React
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Build output - .NET
+bin/
+obj/
+
+# Visual Studio
+.vs/
+**/.vs/
+
+# VS Code
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio user files
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET / Visual Studio temporary files
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Solution files
+*.sln
+
+# Other
+.DS_Store
+*.sw?
 *.ntvs*
 *.njsproj
-*.sln
-*.sw?

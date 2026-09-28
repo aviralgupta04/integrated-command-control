@@ -1,29 +1,61 @@
-﻿using DeviceManagement.Interfaces;
+﻿using DeviceManagement.Data;
+using DeviceManagement.Interfaces;
 using DeviceManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
-public class CameraService : ICameraService
+namespace DeviceManagement.Services
 {
-    private readonly IOnvifService _onvifService;
-
-    public CameraService(IOnvifService onvifService)
+    public class CameraService : ICameraService
     {
-        _onvifService = onvifService;
-    }
+        private readonly IOnvifService _onvifService;
+        private readonly ApplicationDbContext _context;
 
-    public async Task<string> AddCameraAsync(AddCameraRequest request)
-    {
-        var result = await _onvifService.ConnectAsync(
-            request.IpAddress,
-            request.Port,
-            request.Username,
-            request.Password
-        );
-
-        if (!result)
+        public CameraService(
+            IOnvifService onvifService,
+            ApplicationDbContext context)
         {
-            return "Camera connection failed";
+            _onvifService = onvifService;
+            _context = context;
         }
 
-        return "Camera connected successfully";
+        public async Task<string> AddCameraAsync(
+            AddCameraRequest request)
+        {
+            string? rtspUrl =
+                await _onvifService.GetRtspUrlAsync(
+                    request.IpAddress,
+                    request.Port,
+                    request.Username,
+                    request.Password);
+
+            if (string.IsNullOrEmpty(rtspUrl))
+            {
+                return "Camera connection failed";
+            }
+
+            var camera = new Camera
+            {
+                Name = request.CameraName,
+                IpAddress = request.IpAddress,
+                Port = request.Port,
+                Username = request.Username,
+                Password = request.Password,
+                RtspUrl = rtspUrl,
+                Status = "Online"
+            };
+
+            _context.Cameras.Add(camera);
+
+            await _context.SaveChangesAsync();
+
+            return "Camera added successfully";
+        }
+
+        public async Task<List<Camera>> GetCamerasAsync()
+        {
+            return await _context.Cameras
+                .AsNoTracking()
+                .ToListAsync();
+        }
     }
 }

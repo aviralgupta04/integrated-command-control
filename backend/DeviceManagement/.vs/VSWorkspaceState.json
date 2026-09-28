@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\DeviceManagement",
+    "\\DeviceManagement\\Controllers",
     "\\DeviceManagement\\ONVIF",
     "\\DeviceManagement\\Services"
   ],

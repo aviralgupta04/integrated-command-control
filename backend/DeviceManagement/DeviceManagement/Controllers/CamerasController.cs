@@ -1,5 +1,6 @@
 ﻿using DeviceManagement.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using DeviceManagement.Models;
 
 
 namespace DeviceManagement.Controllers
@@ -17,6 +18,7 @@ namespace DeviceManagement.Controllers
 
         [HttpPost]
         public async Task<IActionResult> AddCamera(AddCameraRequest request)
+        
         {
             var result = await _cameraService.AddCameraAsync(request);
 

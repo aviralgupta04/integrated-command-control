@@ -1,6 +1,13 @@
-﻿namespace DeviceManagement.Interfaces
+﻿using DeviceManagement.Models;
+
+namespace DeviceManagement.Interfaces
 {
-    public interface ICameraService
-    {
+    
+        public interface ICameraService
+        {
+            Task<string> AddCameraAsync(AddCameraRequest request);
+        Task<List<Camera>> GetCamerasAsync();
     }
+
+    
 }

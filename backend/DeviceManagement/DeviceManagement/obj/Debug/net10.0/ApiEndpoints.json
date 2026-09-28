@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "DeviceManagement.Controllers.CameraDbRegisterController",
+    "Method": "AddCamera",
+    "RelativePath": "api/CameraDbRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DeviceManagement.Models.AddCameraRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManagement.Controllers.CameraDbRegisterController",
+    "Method": "GetCameras",
+    "RelativePath": "api/CameraDbRegister",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManagement.Controllers.CamerasController",
+    "Method": "AddCamera",
+    "RelativePath": "api/Cameras",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DeviceManagement.Models.AddCameraRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
