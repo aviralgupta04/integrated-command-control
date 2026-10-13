@@ -1,0 +1,20 @@
+# Visual Studio files
+.vs/
+**/.vs/
+
+# .NET build files
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+
+# React dependencies and build output
+**/node_modules/
+**/dist/
+
+# Environment files
+.env
+.env.*
+!.env.example

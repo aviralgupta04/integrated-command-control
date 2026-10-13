@@ -11,6 +11,19 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReact", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
+
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(
@@ -22,13 +35,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 );
 
 
-// ONVIF service
+// ONVIF
 builder.Services.AddHttpClient<
     IOnvifService,
     OnvifCameraService>();
 
 
-// Camera service
+// Camera Service
 builder.Services.AddScoped<
     ICameraService,
     CameraService>();
@@ -42,6 +55,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+
+// CORS MUST be before Authorization/Controllers
+app.UseCors("AllowReact");
 
 app.UseAuthorization();
 

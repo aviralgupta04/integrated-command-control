@@ -51,10 +51,19 @@ namespace DeviceManagement.Services
             return "Camera added successfully";
         }
 
-        public async Task<List<Camera>> GetCamerasAsync()
+        public async Task<List<CameraResponse>> GetCamerasAsync()
         {
             return await _context.Cameras
                 .AsNoTracking()
+                .Select(camera => new CameraResponse
+                {
+                    Id = camera.Id,
+                    Name = camera.Name,
+                    IpAddress = camera.IpAddress,
+                    Port = camera.Port,
+                    Username = camera.Username,
+                    Status = camera.Status
+                })
                 .ToListAsync();
         }
     }

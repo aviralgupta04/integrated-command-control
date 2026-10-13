@@ -1,14 +1,19 @@
+
 import { useEffect, useState } from "react";
 import "./Devices.css";
 
 function Devices() {
 
+    // Controls whether Add Device modal is visible
     const [showModal, setShowModal] = useState(false);
 
+    // Stores cameras received from backend
     const [devices, setDevices] = useState([]);
 
+    // Stores Add Camera form data
     const [camera, setCamera] = useState({
-        name: "",
+        deviceId: 0,
+        cameraName: "",
         ipAddress: "",
         port: 80,
         username: "",
@@ -16,22 +21,40 @@ function Devices() {
     });
 
 
-    // GET cameras from backend
-    useEffect(() => {
+    // =========================================================
+    // GET CAMERAS
+    // =========================================================
 
-        fetch("https://localhost:7068/api/CameraDbRegister")
-            .then(response => response.json())
-            .then(data => {
-                setDevices(data);
-            })
-            .catch(error => {
-                console.error("Error loading cameras:", error);
-            });
+    
+useEffect(() => {
+    const fetchCameras = async () => {
+        try {
+            const response = await fetch(
+                "https://localhost:7068/api/CameraDbRegister"
+            );
 
-    }, []);
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            console.log("Cameras received:", data);
+            setDevices(data);
+        } catch (error) {
+            console.error("Error loading cameras:", error);
+        }
+    };
+
+    fetchCameras();
+}, []);
 
 
-    // Handle input changes
+
+    // =========================================================
+    // HANDLE INPUT CHANGE
+    // =========================================================
+
     const handleChange = (event) => {
 
         const { name, value } = event.target;
@@ -44,7 +67,10 @@ function Devices() {
     };
 
 
-    // Add camera
+    // =========================================================
+    // ADD CAMERA
+    // =========================================================
+
     const handleAddCamera = async () => {
 
         try {
@@ -62,25 +88,38 @@ function Devices() {
                 }
             );
 
+
+            // If backend returns 400 / 500 etc.
             if (!response.ok) {
 
                 const error = await response.text();
 
-                console.error("Camera could not be added:", error);
+                console.error(
+                    "Camera could not be added:",
+                    error
+                );
 
                 return;
             }
 
+
+            // Read successful response
             const result = await response.text();
 
-            console.log(result);
+            console.log(
+                "Camera added successfully:",
+                result
+            );
+
 
             // Close modal
             setShowModal(false);
 
+
             // Clear form
             setCamera({
-                name: "",
+                deviceId: 0,
+                cameraName: "",
                 ipAddress: "",
                 port: 80,
                 username: "",
@@ -88,35 +127,70 @@ function Devices() {
             });
 
 
-            // Reload cameras from database
+            // =================================================
+            // GET UPDATED CAMERA LIST
+            // =================================================
+
             const camerasResponse = await fetch(
                 "https://localhost:7068/api/CameraDbRegister"
             );
 
-            const cameras = await camerasResponse.json();
+
+            if (!camerasResponse.ok) {
+
+                throw new Error(
+                    "Failed to reload cameras"
+                );
+
+            }
+
+
+            const cameras =
+                await camerasResponse.json();
+
 
             setDevices(cameras);
 
         }
         catch (error) {
 
-            console.error("Error adding camera:", error);
+            console.error(
+                "Error adding camera:",
+                error
+            );
 
         }
 
     };
 
 
+    // =========================================================
+    // JSX
+    // =========================================================
+
     return (
+
         <div className="devices-page">
 
-            {/* Header */}
+
+            {/* =================================================
+                HEADER
+            ================================================= */}
+
             <div className="devices-header">
 
                 <div>
-                    <h1>Devices</h1>
-                    <p>Manage cameras connected to your system</p>
+
+                    <h1>
+                        Devices
+                    </h1>
+
+                    <p>
+                        Manage cameras connected to your system
+                    </p>
+
                 </div>
+
 
                 <button
                     className="add-device-btn"
@@ -128,7 +202,11 @@ function Devices() {
             </div>
 
 
-            {/* Device Table */}
+
+            {/* =================================================
+                DEVICE TABLE
+            ================================================= */}
+
             <div className="devices-container">
 
                 <table className="devices-table">
@@ -136,75 +214,77 @@ function Devices() {
                     <thead>
 
                         <tr>
-                            <th>ID</th>
-                            <th>Camera Name</th>
-                            <th>IP Address</th>
-                            <th>Port</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Camera Name
+                            </th>
+
+                            <th>
+                                IP Address
+                            </th>
+
+                            <th>
+                                Port
+                            </th>
+
+                            <th>
+                                Username
+                            </th>
+
+                            <th>
+                                Password
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
                         </tr>
 
                     </thead>
 
 
-                    <tbody>
-
-                        {devices.map((device) => (
-
-                            <tr key={device.id}>
-
-                                <td>{device.id}</td>
-
-                                <td>{device.name}</td>
-
-                                <td>{device.ipAddress}</td>
-
-                                <td>{device.port}</td>
-
-                                <td>{device.username}</td>
-
-                                <td>••••••••</td>
-
-                                <td>
-
-                                    <span
-                                        className={
-                                            device.status === "Online"
-                                                ? "status online"
-                                                : "status offline"
-                                        }
-                                    >
-                                        {device.status}
-                                    </span>
-
-                                </td>
-
-                                <td>
-
-                                    <button className="action-btn">
-                                        Edit
-                                    </button>
-
-                                    <button className="delete-btn">
-                                        Delete
-                                    </button>
-
-                                </td>
-
-                            </tr>
-
-                        ))}
-
-                    </tbody>
+                   <tbody>
+    {devices.length === 0 ? (
+        <tr>
+            <td colSpan="8">No cameras found.</td>
+        </tr>
+    ) : (
+        devices.map((device) => (
+            <tr key={device.id}>
+                <td>{device.id}</td>
+                <td>{device.name}</td>
+                <td>{device.ipAddress}</td>
+                <td>{device.port}</td>
+                <td>{device.username}</td>
+                <td>••••••••</td>
+                <td>{device.status}</td>
+                <td>
+                    <button className="action-btn">Edit</button>
+                    <button className="delete-btn">Delete</button>
+                </td>
+            </tr>
+        ))
+    )}
+</tbody>
 
                 </table>
 
             </div>
 
 
-            {/* Add Device Modal */}
+
+            {/* =================================================
+                ADD DEVICE MODAL
+            ================================================= */}
 
             {showModal && (
 
@@ -212,12 +292,25 @@ function Devices() {
 
                     <div className="add-device-modal">
 
+
+                        {/* =================================================
+                            MODAL HEADER
+                        ================================================= */}
+
                         <div className="modal-header">
 
                             <div>
-                                <h2>Add Device</h2>
-                                <p>Add camera details to your VMS</p>
+
+                                <h2>
+                                    Add Device
+                                </h2>
+
+                                <p>
+                                    Add camera details to your VMS
+                                </p>
+
                             </div>
+
 
                             <button
                                 className="close-btn"
@@ -229,18 +322,26 @@ function Devices() {
                         </div>
 
 
-                        {/* Camera Form */}
+
+                        {/* =================================================
+                            CAMERA FORM
+                        ================================================= */}
 
                         <div className="camera-form">
 
+
+                            {/* Camera Name */}
+
                             <div className="form-group">
 
-                                <label>Camera Name</label>
+                                <label>
+                                    Camera Name
+                                </label>
 
                                 <input
                                     type="text"
-                                    name="name"
-                                    value={camera.name}
+                                    name="cameraName"
+                                    value={camera.cameraName}
                                     onChange={handleChange}
                                     placeholder="Enter camera name"
                                 />
@@ -248,9 +349,14 @@ function Devices() {
                             </div>
 
 
+
+                            {/* IP Address */}
+
                             <div className="form-group">
 
-                                <label>IP Address</label>
+                                <label>
+                                    IP Address
+                                </label>
 
                                 <input
                                     type="text"
@@ -263,9 +369,14 @@ function Devices() {
                             </div>
 
 
+
+                            {/* Port */}
+
                             <div className="form-group">
 
-                                <label>Port</label>
+                                <label>
+                                    Port
+                                </label>
 
                                 <input
                                     type="number"
@@ -277,9 +388,14 @@ function Devices() {
                             </div>
 
 
+
+                            {/* Username */}
+
                             <div className="form-group">
 
-                                <label>Username</label>
+                                <label>
+                                    Username
+                                </label>
 
                                 <input
                                     type="text"
@@ -292,9 +408,14 @@ function Devices() {
                             </div>
 
 
+
+                            {/* Password */}
+
                             <div className="form-group">
 
-                                <label>Password</label>
+                                <label>
+                                    Password
+                                </label>
 
                                 <input
                                     type="password"
@@ -309,7 +430,10 @@ function Devices() {
                         </div>
 
 
-                        {/* Modal Footer */}
+
+                        {/* =================================================
+                            MODAL FOOTER
+                        ================================================= */}
 
                         <div className="modal-footer">
 
@@ -319,6 +443,7 @@ function Devices() {
                             >
                                 Cancel
                             </button>
+
 
                             <button
                                 className="save-device-btn"
@@ -336,7 +461,9 @@ function Devices() {
             )}
 
         </div>
+
     );
 }
 
 export default Devices;
+

@@ -6,7 +6,7 @@ namespace DeviceManagement.Interfaces
         public interface ICameraService
         {
             Task<string> AddCameraAsync(AddCameraRequest request);
-        Task<List<Camera>> GetCamerasAsync();
+        Task<List<CameraResponse>> GetCamerasAsync();
     }
 
     
